@@ -1,0 +1,268 @@
+body,
+html {
+  /*Koko sivun määrityksiä*/
+  margin: auto;
+  font-family: 'Abel', sans-serif;
+  height: 100%;
+  max-width: 60em;
+  background-color: rgb(10, 10, 10);
+}
+/*Ikonien määrittelyt*/
+i {
+  padding-right: 0.3em;
+  display: inline-flex;
+  font-size: 24px !important;
+  vertical-align: -3px;
+  padding-bottom: 5px;
+}
+.some {
+  width: 40px;
+  height: auto;
+  padding: 10px;
+}
+
+.linked,
+.center-ikonit {
+  text-align: center;
+}
+/*Ikonien määrittely loppuu*/
+
+article {
+  max-width: 100%;
+  font-size: 90%;
+}
+#headerkuva {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+nav {
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  height: 2em;
+  padding: 0.5em;
+}
+nav a {
+  font-family: 'Press Start 2P';
+  font-size: 90%;
+  position: inherit;
+  color: whitesmoke !important;
+  text-align: center;
+  text-decoration: none;
+  padding: 2.5em;
+}
+nav a:hover {
+  color: rgb(139, 77, 255) !important;
+}
+nav a.active {
+  background-image: linear-gradient(rgb(194, 102, 247), rgb(110, 43, 187));
+  color: black !important;
+} /*nav-bar loppuu*/
+
+#content_all {
+  background-color: #353535;
+  overflow: hidden;
+  font-size: 1.15em;
+  width: 100%;
+  height: 100%;
+  padding-top: 2em;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(95, 95, 95));
+}
+#content_left,
+#content_left_2,
+#content_right,
+#content_right_2 {
+  width: 60%;
+  height: 100%;
+  background-color: #ba94ff;
+  border: 0.1em solid black;
+  border-radius: 1em;
+  padding: 1em;
+  overflow: hidden;
+  margin: 0 0 1em 1.5em;
+  float: left;
+  font-size: 120%;
+}
+#content_right {
+  width: 20%;
+  float: right;
+  margin: 0 40px 1.5em 0.5em;
+}
+#content_right_2 {
+  width: 34%;
+  float: right;
+  margin: 0 1em 1.5em 0.5em;
+}
+#content_left_2 {
+  width: 50%;
+  margin: 0 10 1.5em 25;
+}
+.videot,
+#pelilaatikko {
+  text-align: center;
+}
+#omakuva {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+p {
+  margin: 5px;
+  padding: 1px;
+}
+a:link,
+a:visited {
+  color: rgb(114, 0, 207);
+  text-decoration: none;
+  font-weight: bold;
+}
+h3 {
+  background-color: rgba(98, 38, 155, 0.507);
+  display: inline-block;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 0 0 0.5em 0;
+}
+footer {
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  height: 2em;
+  padding: 0.6em;
+  color: whitesmoke;
+}
+#footer_left,
+#footer_right {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 0.1em;
+  font-size: 120%;
+}
+hr.rounded {
+  border-top: 5px solid rgb(143, 71, 236);
+  border-radius: 5px;
+}
+hr.rounded2 {
+  border-top: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 0;
+}
+hr.rounded3 {
+  border-top: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 0;
+}
+.kortti1 {
+  /*Korttien perusasettelut*/
+  padding: 0.5em;
+  margin-bottom: 3em;
+}
+.otsikko {
+  background-image: linear-gradient(
+    rgb(197, 51, 255),
+    rgb(114, 90, 253),
+    rgba(130, 76, 175, 0.027)
+  );
+  border-radius: 0.5em;
+  margin-bottom: 15px;
+  margin: 0 15 auto;
+}
+.kortti-inner {
+  width: 85%;
+  height: 15.625em;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0.25em 0.5em 0 #000000;
+  border-radius: 1em;
+}
+.kortti1:hover .kortti-inner {
+  transform: rotateY(180deg);
+}
+.kortti-etu,
+.kortti-taka {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.kortti-taka {
+  background-color: #ba94ff;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 1em;
+}
+/*Mobiilinäkymän määrittely*/
+@media screen and (max-width: 800px) {
+  #content_left,
+  #content_right,
+  #content_right_2 {
+    float: none;
+    display: block;
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+  }
+  #content_right {
+    width: 40%;
+  }
+  #content_right_2 {
+    width: 90%;
+    margin: 1em auto;
+  }
+  #content_left_2 {
+    width: 90%;
+    float: none;
+    display: block;
+    height: 100%;
+    margin: 1em auto;
+  }
+  i {
+    vertical-align: -3px;
+    font-size: 22px !important;
+    padding-right: 10px;
+  }
+  nav {
+    height: 110px;
+  }
+  nav a {
+    display: block;
+    padding: 6px 0px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+  }
+  #pelilaatikko {
+    font-size: 80%;
+  }
+  .videot {
+    width: 80%;
+    height: auto;
+    border-radius: 1em;
+    margin-left: 1.5em;
+  }
+  footer {
+    overflow: hidden;
+    height: 40px;
+  }
+  #footer_right,
+  #footer_left {
+    display: inline-block;
+    margin: 5px 8px;
+    font-size: 100%;
+  }
+  .kortti1,
+  .kortti-inner {
+    height: 20em;
+  }
+  .etuteksti {
+    padding-top: 3em;
+  }
+  .kortti-taka {
+    margin: auto auto;
+  }
+} /*Mobiilinäkymän määrittelyt loppuu*/
